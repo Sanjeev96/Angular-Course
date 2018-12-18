@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'practiceDataBinding'`, () => {
+  it(`should have as title 'practiceDirectives'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('practiceDataBinding');
+    expect(app.title).toEqual('practiceDirectives');
   });
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to practiceDataBinding!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to practiceDirectives!');
   });
 });

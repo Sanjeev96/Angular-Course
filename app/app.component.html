@@ -1,12 +1,9 @@
-
-<!-- my way -->
-<input type="text" class="form-control" [(ngModel)]="username" (input)="OnUserNameEntry($event)">
-<p>username = {{username}}</p>
-<button [disabled]="!notxtButtonOf" class="btn btn-primary" (click)="onBtnClick()">Click Me</button>
-
-
-<!-- maxes way -->
-<input type="text" class="form-control" [(ngModel)]="username" (input)="OnUserNameEntry($event)">
-<p>username = {{username}}</p>
-<button [disabled]="!notxtButtonOf" (click)="onBtnClick()">Click Me</button>
-
+<span (click)="clickLog()">
+  <button *ngIf="!toggle" (click)="hidetxt()">Hide Details</button>
+  <button *ngIf="toggle" (click)="showtxt()">Show Details</button>
+</span>
+<br>
+<br>
+<h3 *ngIf="!toggle">this is the toggle assignment</h3>
+<br>
+<h3  *ngFor="let count of countArray" [ngStyle]="{backgroundColor: getColor(count)}" [ngClass]="{txtChange: count >= 5}">{{count}}</h3>

@@ -6,24 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'practiceDirectives';
 
-  public username = '';
-  title = 'practiceDataBinding';
-  notxtButtonOf = false;
+  // tslint:disable-next-line:no-inferrable-types
+  public toggle: boolean = false;
+  // tslint:disable-next-line:no-inferrable-types
+  public countArray = [];
 
+  clickLog() {
+    // clickCount = this.count;
+    this.countArray.push(this.countArray.length);
 
-  OnUserNameEntry(event: any) {
-    if (this.username !== null || this.username !== '') {
-      this.notxtButtonOf = true;
-    }
-    // if (this.username == null || this.username == '') {
-    //   this.notxtButtonOf = false;
-    // } was used before final stage of adding button functionality
   }
 
-  onBtnClick() {
-    this. username = null;
-    this.notxtButtonOf = false;
+  hidetxt() {
+    this.toggle = true;
+  }
+
+  showtxt() {
+    this.toggle = false;
+  }
+
+  getColor(count: number) {
+    return count >= 5 ? 'blue' : 'white';
   }
 }
-
