@@ -1,0 +1,12 @@
+
+<!-- my way -->
+<input type="text" class="form-control" [(ngModel)]="username" (input)="OnUserNameEntry($event)">
+<p>username = {{username}}</p>
+<button [disabled]="!notxtButtonOf" class="btn btn-primary" (click)="onBtnClick()">Click Me</button>
+
+
+<!-- maxes way -->
+<input type="text" class="form-control" [(ngModel)]="username" (input)="OnUserNameEntry($event)">
+<p>username = {{username}}</p>
+<button [disabled]="!notxtButtonOf" (click)="onBtnClick()">Click Me</button>
+
